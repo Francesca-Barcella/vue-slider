@@ -17,7 +17,7 @@
             <div class="slider-wrapper" tabindex="0">
                 <!-- immagine grande -->
                 <div class="item">
-                    <img v-bind="imageActive"/>
+                    <img :src="videogame.image[imageActive]"/>
                     <div class="text">
                         <h3>{{title}}</h3>
                         <p>{{description}}</p>
