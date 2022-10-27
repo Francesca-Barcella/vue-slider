@@ -6,9 +6,7 @@ createApp({
             title: 'Spiderman',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit empore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             
-            imageActive: {
-                src: './assets/img/01.webp'
-            },
+            imageActive: 0,
 
             videogames: [
                 {
@@ -42,6 +40,15 @@ createApp({
                     altText: 'Avengers'
                 }
             ]
+        }
+    },
+
+    methods: {
+        nextBtn: function (videogmase, i){
+            console.log('hai cliccato su next')
+            if (this.imageActive === 0) {
+                this.imageActive++
+            }
         }
     }
 }).mount('#app')
