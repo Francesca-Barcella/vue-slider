@@ -3,8 +3,12 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'messaggio di prova',
+            title: 'Spiderman',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit empore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
+            
+            imageActive: {
+                src: './assets/img/01.webp'
+            },
 
             videogames: [
                 {
