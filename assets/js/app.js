@@ -5,12 +5,12 @@ createApp({
         return {
             title: 'Spiderman',
             description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit empore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-            
-            /* imageActive: {
-                src: './assets/img/01.webp'
-            }, */
 
-            imageActive: 0,
+            imageActive: {
+                src: './assets/img/01.webp'
+            },
+
+            /* imageActive: 0, */
 
             videogames: [
                 {
@@ -48,10 +48,19 @@ createApp({
     },
 
     methods: {
-        nextBtn: function (){
-            console.log('hai cliccato su next' + this.imageActive)
-            if (this.imageActive === 0) {
-                this.imageActive++
+        nextBtn() {
+            console.log('hai cliccato su next')
+            this.activeImage++
+            if (this.activeImage === this.videogames.length) {
+                this.imageActive = 0
+            }
+        },
+
+        prevBtn() {
+            console.log('hai cliccato su prec')
+            this.activeImage--
+            if (this.activeImage <0) {
+                this.imageActive = this.videogames.length - 1
             }
         }
     }

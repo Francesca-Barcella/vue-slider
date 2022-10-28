@@ -16,13 +16,15 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <!-- immagine grande -->
-                <div class="item">
-                    <img :src="videogame.image[imageActive]"/>
+                <div class="item" v-for="videogame in videogames">
+                    <img v-bind="imageActive"/>
+
                     <div class="text">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
+                        <h3>{{videogame.title}}</h3>
+                        <p>{{videogame.text}}</p>
                     </div>
                 </div>
+                
                 <!-- immagine piccole + pulsanti prec & next-->
                 <div class="thumbs">
                     <button class="prev" @click="prevBtn"></button>
